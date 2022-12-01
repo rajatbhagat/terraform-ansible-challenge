@@ -3,9 +3,10 @@ Interview Challenge to provision resources using Terraform
 
 # Objective
 
-1. Create a Python hello world app using Flask
+1. Create a Python script to fetch data from an API
 1. Create the resources on OCI as using Terraform
-1. Configure and deploy the Flask application using Ansible
+1. Configure and deploy the Python script on the created instance using Ansible
+1. Create Ansible roles and playbooks to perform tasks
 
 # Python
 
