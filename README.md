@@ -41,21 +41,3 @@ Before beginning ansible section, checkin python code to repo
     1. Take keyword to search as input
     1. Search for the keyword in the `description` tag. If it matches perfectly or is a subtring of the word, then output the `title`.
 1. Create a single playbook to execute the above mentioned tasks 
-
-# Comments/implemention details/thought process
-Feel free to add any comments or details here that would be useful when grading your solution. If you face any issues and you need to make an assumptions or any other step to proceed, please document them.
-
-
-# Grading Process
-
-1. Under terraform directory, run terraform to create infrastructure
-    - terraform init
-    - terraform apply
-1. Under ansible directory, run ansible-playbook to install hello world app, create firewalld rules, and start app
-    - ansible-playbook -i <compute_ip>, playbook.yml --private-key ~/.ssh/id_rsa -u opc
-1. Navigate browser to http://\<public_ip\>:5000 to show hello world app is running
-1. Reboot compute instance
-1. Verify app starts automatically and refresh browser
-1. SSH into compute instance to show public_key is working
-1. Ping VM in private subnet B to check if connectivity is setup correctly
-1. Ping VM in private subnet A should fail since no route exists
