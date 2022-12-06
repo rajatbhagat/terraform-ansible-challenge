@@ -3,15 +3,20 @@ Interview Challenge to provision resources using Terraform
 
 # Objective
 
-1. Create a Python script to fetch data from an API
+1. Solve the programming challenge
 1. Create the resources on OCI as using Terraform
-1. Configure and deploy the Python script on the created instance using Ansible
+1. Configure and deploy the programming challenge on the created instance using Ansible
 1. Create Ansible roles and playbooks to perform tasks
 
-# Python
+# Programming Challenge
 
-1. Install python dependencies requests
-1. Under python directory, modify `app.py` to fetch data from url `https://dummyjson.com/products?skip=5&limit=100` and write the data to an output file `data.json`
+Write a program in Go / Node / Java / Python to:
+1. Read the file named : `/programming/file1`
+1. Sort the file on the IP address column
+1. Make sure to find and remove duplicates programmatically.
+1. Then generate a reverse name file with the records - see an example on how output should like for a single record in output-sample.
+1. Write the output to : `outfile1`
+
 
 # Terraform
 
@@ -30,14 +35,12 @@ Interview Challenge to provision resources using Terraform
 
 # Ansible
 
-Before beginning ansible section, checkin python code to repo
+Before beginning ansible section
 1. Under ansible directory, create a role to:
-    1. Install python dependencies
-    1. Create a directory `/app/`
-    1. Copy the python code in the directory.
-    1. Run the code and create the `data.json` in the `/app` directory
+    1. Configure the instance so that you are able to deploy and execute the programming challenge
+    1. Deploy and run the code in this directory to generate the output file: `outfile1`
+    1. Print the contents of the `outfile1` onto the console
 1. Create a role to:
-    1. Read the file `data.json`
-    1. Take keyword to search as input
-    1. Search for the keyword in the `description` tag. If it matches perfectly or is a subtring of the word, then output the `title`.
-1. Create a single playbook to execute the above mentioned tasks 
+    1. Ping the instance created in the private subnet.
+    1. Ping the instance and dump the output on the console.
+1. Create a single playbook to execute the above mentioned roles
